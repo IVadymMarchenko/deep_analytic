@@ -1,0 +1,84 @@
+{% extends "base_app/base.html" %}
+{% load static %}
+{%block static%}
+<link rel="stylesheet" href="{% static 'users/user_regist.css' %}">
+<script src="{% static 'users/js/registr_form_validation.js' %}" defer></script>
+{%endblock%}
+
+
+{% block content%}
+<!---Форма регистрацыи открыто-->
+<div class="wrapper">
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+      <!-- sign up -->
+      <div class="signup input-control">
+        <form id="form" action="{% url 'users:registration' %}" method="post" novalidate data-js-form>
+          {% csrf_token %}
+          <label for="chk" aria-hidden="true">Sign Up</label>
+          <div class="form-group">
+            <input type="text" id="name" name="username" value="{% if form.username.value  %}{{form.username.value}}{% endif %}" placeholder="Your name..." required>
+            <span class="field_errors" style="" id="name_error"></span>
+            {% if form.username.errors%}
+            <div id="notification" style="color:red; margin-top: -20px; display: ;" role="alert">
+              {{form.username.errors}}
+            </div>
+            {% endif%}
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" value="{% if form.email.value  %}{{form.email.value}}{% endif %}" placeholder="Email" required>
+            <span class="field_errors" id="email_error"></span>
+
+            {% if form.email.errors%}
+            <div id="notification" style="color:red; margin-top: -20px; display: ;" role="alert">
+              {{form.email.errors}}
+            </div>
+            {%endif%}
+
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password1" placeholder="Password" required>
+            <span class="field_errors" id="password_error"></span>
+            {% if form.password2.errors%}
+            <div id="notification" style="color:red; margin-top: -20px; display: ;" role="alert">
+              {{form.password2.errors}}
+            </div>
+            {%endif%}
+          </div>
+          <div class="form-group">
+            <input type="password" id="confirm_password" name="password2" placeholder="Confirm password" required>
+            <span class="field_errors" id="confirm_password_error"></span>
+          </div>
+          <button type="submit" id="submit_button" disabled>Sign Up</button>
+        </form>
+      </div>
+
+
+
+      <!-- login -->
+      <div class="login">
+        <form action="{% url "users:login" %}" method="post">
+          {% csrf_token %}
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" value="{% if form.email.value  %}{{form.email.value}}{% endif %}" placeholder="email" required="">
+          <input type="password" name="password" placeholder="password" required="">
+        <!--ERRORS FORMS OPEN-->
+        {% include "users/login_errors.html" %}
+        <!--ERRORS FORMS CLOSE-->
+          <div class="container" style="display: flex; align-items: center; margin-top: -15px; margin-right: -25px;">
+            <a href="#" class="forgot_password" style="margin-right: 10px; text-decoration: none; color: #007bff; font-size:16px;">Forgot password?</a>
+            <a href="#" style="display: flex; align-items: center; text-decoration: none; color: #4285F4; font-size: 16px;">
+                <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" 
+                     alt="Google" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;">
+                Sign in with Google
+            </a>
+        </div>
+          <button>Login</button>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+  {% endblock%}
+  <!---Форма регистрацыи закрыто-->

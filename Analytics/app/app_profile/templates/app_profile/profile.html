@@ -1,0 +1,29 @@
+{% extends "base_app/base.html" %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'app_profile/profile.css' %}">
+
+    <!--SIDEBAR OPEN-->
+    <div class="container-fluid">
+        <!-- Боковое меню -->
+        <div class="sidebar">
+            <h2>Load data</h2>
+            <ul>
+                <li><a class="sidebar-href" href="#">Ссылка 1</a></li>
+                <li><a class="sidebar-href" href="#">Ссылка 2</a></li>
+                <li><a class="sidebar-href" href="#">Ссылка 3</a></li>
+                <li><a class="sidebar-href" href="#">Ссылка 4</a></li>
+            </ul>
+        </div>
+
+        <!-- Правая колонка с формой для текста -->
+        <div class="content">
+            <form class="text-form">
+                <textarea placeholder="Введите текст..." rows="10"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <!--SIDEBAR CLOSE-->
+    {% endblock %}

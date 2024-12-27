@@ -1,0 +1,91 @@
+/* ===========================================SIDEBAR OPEN==========================================================*/
+
+/* Основной контейнер */
+.container-fluid {
+    display: flex;
+    max-width: 1000px; /* Растягиваем контейнер на весь экран */
+    height: 700px;
+    margin-top: 50px;
+}
+/* Колонка с меню */
+.sidebar {
+    width: 25%; /* Ширина меню */
+    background-image: linear-gradient(to right, #504f4f, #626363);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Растягиваем на всю высоту */
+    border-top-left-radius: 15px; /* Скругление верхнего левого угла */
+    border-bottom-left-radius: 15px; /* Скругление нижнего левого угла */
+}
+
+.sidebar h2 {
+    color: #f9f4f4;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Jost' sans-serif; 
+}
+
+.sidebar-href {
+  color: rgb(255, 255, 255);
+    font-size:20px;
+    font-weight: bold;
+    font-family: 'Jost' sans-serif; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    display: inline-block; /* Добавляем строчно-блочный контекст */
+}
+
+.sidebar-href:hover {
+  color: #000000; /* изменения цвета при наведении */
+  transform: scale(1.1); /* Увеличение размера при наведении */
+  transition: all 0.3s ease; /* Плавная анимация */
+}
+.sidebar-href.active {
+  color: #000000; /* Цвет для активной ссылки */
+  text-shadow: none; /* Убираем тень, если нужно */
+}
+
+/* Колонка с формой */
+.content {
+    flex-grow: 1; /* Заполняет оставшееся пространство */
+    background-image: linear-gradient(to left, #ffffff, #ffffff);
+    padding: 20px;
+    height: 100%; /* Растягиваем на всю высоту */
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Стили для формы */
+.text-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Растягиваем форму на всю высоту */
+}
+
+.text-form textarea {
+    flex-grow: 1; /* Растягиваем текстовое поле */
+    resize: none; /* Отключаем изменение размера */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.text-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.text-form button:hover {
+    background-color: #0056b3;
+}
+
+/* ===========================================SIDEBAR CLOSE==========================================================*/

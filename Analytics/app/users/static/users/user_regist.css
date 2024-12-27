@@ -1,0 +1,128 @@
+ /* Центрирование всей формы на странице */
+ .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #17abb3, #102d2d);
+    margin: 0;
+    margin-top: 70px; /* Опустить на 50px */
+  }
+  
+  /* Стили для основного контейнера */
+  .main {
+    width: 350px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000000;
+    background-image: linear-gradient(to right, #ffffff, #236d71);
+  }
+  
+  #chk {
+    display: none;
+  }
+  
+  .signup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  label {
+    color: #000000;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+  }
+  
+  input {
+    width: 80%;
+    height: 35px;
+    background: #ffffff;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+  }
+  
+  button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #ffffff;
+    background: #266568;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #000000;
+    transform: scale(1.02); /* Увеличение размера при наведении */
+  }
+  
+  .login {
+    height: 460px;
+    background: rgb(250, 250, 250);
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .login label {
+    color: #236d71;
+    transform: scale(0.6);
+  }
+  
+  #chk:checked ~ .login {
+    transform: translateY(-500px);
+  }
+  
+  #chk:checked ~ .login label {
+    transform: scale(1);
+  }
+  
+  #chk:checked ~ .signup label {
+    transform: scale(0.6);
+  }
+  .signup .field input[required]::placeholder {
+    color: black;
+}
+
+/* Стили для контейнера формы */
+.form-group {
+  position: relative;
+  margin-bottom: 20px; 
+}
+
+/* Стили для сообщений об ошибках */
+.field_errors {
+  color: rgb(255, 2, 2);
+  font-size: 14px;
+  position: absolute;
+  margin-left: 35px;
+  top: 100%; /* Расположим ошибку под полем ввода */
+  left: 0;
+  width: 100%; /* Сообщение будет растягиваться на всю ширину поля */
+  visibility: hidden; /* По умолчанию скрыто */
+}
+
+/* Отображение ошибок */
+input:invalid + .field_errors,
+input:focus + .field_errors {
+  visibility: visible; /* Показываем ошибку, если поле некорректно или в фокусе */
+}

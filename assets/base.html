@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analize</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!-- подключ шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- подключ шрифт -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"><!-- подключ шрифт -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- подключ бутсрап -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <!-- подключаем иконки -->
+  <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+  <link rel="stylesheet" href="./base.css">
+</head>
+
+<body>
+  <!--шапка сайта OPEN-->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand fs-2 fw-bold" href="#"><span class="text-banner">Deep</span>Analyze</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark"
+          aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarDark">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0 fs-5 ms-auto p-2 text-center">
+            <li class="nav-item me-3">
+              <a class="nav-link  " aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Service</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!--шапка сайта CLOSE-->
+
+  <!-----Форма регистрацыи открыто-->
+  <div class="wrapper">
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+      <!-- sign up -->
+      <div class="signup">
+        <form>
+          <label for="chk" aria-hidden="true">Sign Up</label>
+          <input type="text" name="txt" placeholder="User name..." required="">
+          <input type="email" name="email" placeholder="email" required="">
+          <input type="password" name="pswd" placeholder="password" required="">
+          <input type="password" name="pswd" placeholder="password" required="">
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <!-- login -->
+      <div class="login">
+        <form>
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" placeholder="email" required="">
+          <input type="password" name="pswd" placeholder="password" required="">
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-----Форма регистрацыи заткрыто-->
+
+  <!-----FOOTER OPEN------>
+  <footer class="footer">
+    <div class="container container-footer">
+      <div class="row">
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <div class="footer-href">
+            <li><a href="#">about us</a></li>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ask</h4>
+          <div class="footer-href">
+            <li><a href="#">ask us</a></li>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>support us</h4>
+          <div class="footer-href">
+            <li><a href="#">terms of use</a></li>
+          </div>
+        </div>
+
+        <div class="footer-col social">
+          <h4>Contact</h4>
+          <div class="footer-href ">
+            <li><a href="#"><i class="fas fa-envelope"></i> exemple@mail.com</a></li>
+            <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-----FOOTER CLOSE------>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- подключ джава скрипт -->
+  <script src="./base.js"></script>
+</body>
+
+</html>

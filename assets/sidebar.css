@@ -1,0 +1,240 @@
+/* ===========================================Общие настройки открыто==========================================================*/
+section img{
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #17abb3, #102d2d);
+  /*background-image: url('/images/Grainy_Wallpaper.jpg');
+  background-size: cover; /* Заполняет всю область */
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost';
+  
+}
+
+/* ===========================================Общие настройки ззакрыто==========================================================*/
+
+
+/* ===========================================НАВИГАЦ ПАНЕЛЬ ОТКРЫТО ==========================================================*/
+
+.navbar {
+  background-image: linear-gradient(to right, #17abb3, #102d2d);
+  opacity: 0.9;
+}
+  .nav-link {
+    color: rgb(254, 254, 254);
+    font-size:20px;
+    font-weight: bold;
+    font-family: 'Jost' sans-serif; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+  }
+  .nav-link:hover {
+    color: #000000; /* изменения цвета при наведении */
+    transform: scale(1.3); /* Увеличение размера при наведении */
+    transition: all 0.3s ease; /* Плавная анимация */
+  }
+
+  .text-banner{
+    color: #ffffff;
+  }
+  .navbar-toggler {
+    color: black;
+    background-color: #ffffff;
+  }
+
+  .active {
+    background-color: rgb(248, 248, 248);
+    padding: 3px 6px; /* Уменьшаем отступы для уменьшения размера */
+    border-radius: 10px; /* Закругляем углы на 5 пикселей */
+
+  }
+  /* ========================================НАВИГАЦ ПАНЕЛЬ ЗАТКРЫТО ==========================================================*/
+
+
+
+/* ===========================================SIDEBAR OPEN==========================================================*/
+
+/* Основной контейнер */
+.container-fluid {
+    display: flex;
+    max-width: 1000px; /* Растягиваем контейнер на весь экран */
+    height: 700px;
+    margin-top: 50px;
+}
+/* Колонка с меню */
+.sidebar {
+    width: 25%; /* Ширина меню */
+    background-image: linear-gradient(to right, #504f4f, #626363);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Растягиваем на всю высоту */
+    border-top-left-radius: 15px; /* Скругление верхнего левого угла */
+    border-bottom-left-radius: 15px; /* Скругление нижнего левого угла */
+}
+
+.sidebar h2 {
+    color: #f9f4f4;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Jost' sans-serif; 
+}
+
+.sidebar-href {
+  color: rgb(255, 255, 255);
+    font-size:20px;
+    font-weight: bold;
+    font-family: 'Jost' sans-serif; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    display: inline-block; /* Добавляем строчно-блочный контекст */
+}
+
+.sidebar-href:hover {
+  color: #000000; /* изменения цвета при наведении */
+  transform: scale(1.1); /* Увеличение размера при наведении */
+  transition: all 0.3s ease; /* Плавная анимация */
+}
+.sidebar-href.active {
+  color: #000000; /* Цвет для активной ссылки */
+  text-shadow: none; /* Убираем тень, если нужно */
+}
+
+/* Колонка с формой */
+.content {
+    flex-grow: 1; /* Заполняет оставшееся пространство */
+    background-image: linear-gradient(to left, #ffffff, #ffffff);
+    padding: 20px;
+    height: 100%; /* Растягиваем на всю высоту */
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Стили для формы */
+.text-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Растягиваем форму на всю высоту */
+}
+
+.text-form textarea {
+    flex-grow: 1; /* Растягиваем текстовое поле */
+    resize: none; /* Отключаем изменение размера */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.text-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.text-form button:hover {
+    background-color: #0056b3;
+}
+
+/* ===========================================SIDEBAR CLOSE==========================================================*/
+
+
+  /* ===========================================FOOTER OPEN==========================================================*/
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .footer{
+    margin-top: 75px;
+    margin-right: -50px;
+  }
+
+  .container1 {
+    max-width: 1550px;
+    
+    
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    list-style: none;
+  }
+  .footer-col {
+    width: 25%;
+    padding: 0px 60px;
+  }
+  .footer-col h4 {
+    font-size: 18px;
+    color: #000000;
+    text-transform: capitalize;
+    font-family: 'Jost' sans-serif;
+    margin-bottom: 12px;
+    font-weight: 800;
+    position: relative;
+  }
+  li {
+    list-style: none;
+  }
+
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(255, 255, 255);
+    height: 1px;
+    width: 50px;
+    
+  }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .footer-col .footer-href li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #c3bebe;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col .footer-href li a:hover{
+    color: #ffffff;
+    padding-left: 4px;
+  }
+
+  .footer-col .social-lincs {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin: 0 10px 10px 0;
+  }
+  
+  .footer {
+    background-image: linear-gradient(to right, #17abb3, #102d2d);
+  }
+   /* ===========================================FOOTER CLOSE==========================================================*/
