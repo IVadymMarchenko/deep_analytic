@@ -7,5 +7,5 @@ app_name = 'profile'
 
 
 urlpatterns = [
-    path("",  views.get_profile, name="prifile"),   
+     path('<str:username>/<int:user_id>/', views.get_profile, name='profile'),   
 ]

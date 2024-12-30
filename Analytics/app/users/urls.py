@@ -8,8 +8,8 @@ app_name = 'users'
 
 
 urlpatterns = [
-     path("",  views.base, name="users"),
-     path("login/",  views.login, name="login"),
+     path("",  views.BaseView.as_view(), name="users"),
+     path("login/",  views.UserLoginView.as_view(), name="login"),
      path("registration/",  views.registration, name="registration"),
      path("logout/",  views.logout, name="logout"),  
 ]
