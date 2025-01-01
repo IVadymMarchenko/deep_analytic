@@ -126,3 +126,23 @@ input:invalid + .field_errors,
 input:focus + .field_errors {
   visibility: visible; /* Показываем ошибку, если поле некорректно или в фокусе */
 }
+
+.username_notification{
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  position: absolute;
+  margin-left: 7px;
+  top: 100%; /* Расположим ошибку под полем ввода */
+  left: 0;
+  width: 100%; /* Сообщение будет растягиваться на всю ширину поля */
+}
+
+.email_notification{
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  position: absolute;
+  margin-left: 7px;
+  top: 100%; /* Расположим ошибку под полем ввода */
+  left: 0;
+  width: 100%; /* Сообщение будет растягиваться на всю ширину поля */
+}

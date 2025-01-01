@@ -9,9 +9,9 @@
 
 <script>
     setTimeout(function() {
-    const notification = document.getElementById('notification');
-    if (notification) {
-        notification.style.display = 'none';
-    }
-  }, 5000);
+        const notifications = document.querySelectorAll('[id$="_notification"]');
+        notifications.forEach(function(notification) {
+            notification.style.display = 'none';
+        });
+    }, 5000);
   </script>
