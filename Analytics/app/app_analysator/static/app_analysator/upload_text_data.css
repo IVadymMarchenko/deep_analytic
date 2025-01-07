@@ -1,0 +1,41 @@
+/* Колонка с формой */
+.content {
+    flex-grow: 1; /* Заполняет оставшееся пространство */
+    background-image: linear-gradient(to left, #ffffff, #ffffff);
+    padding: 20px;
+    height: 100%; /* Растягиваем на всю высоту */
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Стили для формы */
+.text-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Растягиваем форму на всю высоту */
+}
+
+.text-form textarea {
+    flex-grow: 1; /* Растягиваем текстовое поле */
+    resize: none; /* Отключаем изменение размера */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.text-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.text-form button:hover {
+    background-color: #0056b3;
+}

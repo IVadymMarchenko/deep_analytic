@@ -1,0 +1,17 @@
+{% extends "app_profile/profile.html" %}
+{% load static %}
+
+
+{%block static%}
+<link rel="stylesheet" href="{% static 'app_analysator/upload_text_data.css' %}">
+{% endblock%}
+
+
+{%block upload_data%}
+<div class="content">
+    <form class="text-form" method='post'>
+        <textarea placeholder="Enter text in format key:value..." rows="10"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+{% endblock%}

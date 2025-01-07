@@ -1,0 +1,35 @@
+{% extends "app_profile/profile.html" %}
+{% load static %}
+
+
+{%block static%}
+<script src="{% static 'app_analysator/js/form_js.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'app_analysator/table.css' %}">
+{% endblock%}
+
+
+{% block upload_data %}
+<div class="content">
+    
+    <!-- Вывод ошибок формы -->
+    <table class="sales-table">
+        <thead>
+            <tr>
+                {% for column in columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h4 class="dataset-info">columns <a style="color:red;">{{num_cols}}</a>,  rows <a style="color:red;">{{num_rows}}</a> in your data! Please follow the <a href="#">link</a> to select the chart and analysis</h4>
+</div>
+{% endblock %}

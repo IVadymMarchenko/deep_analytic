@@ -10,20 +10,22 @@
         <div class="sidebar">
             <h2>Load data</h2>
             <ul>
-                <li><a class="sidebar-href" href="#">Upload text data</a></li>
-                <li><a class="sidebar-href" href="#">Upload your files</a></li>
-                <li><a class="sidebar-href" href="#">Ссылка 3</a></li>
-                <li><a class="sidebar-href" href="#">Ссылка 4</a></li>
+                <li><a class="sidebar-href" href="{% url 'analysator:upload_text' %}">Upload text data</a></li>
+                <li><a class="sidebar-href" href="{% url 'analysator:upload_file' %}">Upload your files</a></li>
+                <li><a class="sidebar-href" href="{% url "analysator:table" %}">Table</a></li>
+                <li><a class="sidebar-href" href="#">Diagram</a></li>
             </ul>
         </div>
 
         <!-- Правая колонка с формой для текста -->
+        {% block upload_data %}
         <div class="content">
             <form class="text-form" method='post'>
                 <textarea placeholder="Enter text in format key:value..." rows="10"></textarea>
                 <button type="submit">Отправить</button>
             </form>
         </div>
+        {% endblock %}
     </div>
     <!--SIDEBAR CLOSE-->
     {% endblock %}

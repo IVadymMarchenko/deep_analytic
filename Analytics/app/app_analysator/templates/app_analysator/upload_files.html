@@ -1,0 +1,26 @@
+{% extends "app_profile/profile.html" %}
+{% load static %}
+
+
+{%block static%}
+<script src="{% static 'app_analysator/js/form_js.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'app_analysator/upload_files.css' %}">
+{% endblock%}
+
+
+{%block upload_data%}
+<div class="content">
+    {% if messages %}
+    <div class="error-messages">
+        {% for message in messages %}
+        <p class="error" style="color:red;">{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <form method="post" action="{% url 'analysator:upload_file' %}" enctype="multipart/form-data" id="uploadForm">
+        {% csrf_token %}
+        <input type="file" id="uploadBtn" name="file" accept=".json, .csv, .xls, .xlsx">
+        <label class="fileUploader" for="uploadBtn">Upload File (json, csv, excel)</label>
+    </form>
+</div>
+{% endblock%}
