@@ -23,4 +23,5 @@ urlpatterns = [
     path("", include("users.urls", namespace="users")),
     path("profile/",include("app_profile.urls",namespace='profile')),
     path("upload/",include("app_analysator.urls",namespace='analysator')),
+    path("display/",include("app_display_data.urls",namespace="display_data")),
 ]

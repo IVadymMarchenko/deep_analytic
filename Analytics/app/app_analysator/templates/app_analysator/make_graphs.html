@@ -1,0 +1,79 @@
+{% extends "app_profile/profile.html" %}
+{% load static %}
+
+{% block static %}
+<script src="{% static 'app_analysator/js/form_js.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'app_analysator/upload_files.css' %}">
+<link rel="stylesheet" href="{% static 'app_display_data/display_data.css' %}">
+{% endblock %}
+
+{% block upload_data %}
+<div class="content">
+    {% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="message-errors" style="color:red;">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="columns">
+            <!-- Первая колонка: выбор оси X -->
+            <div class="column">
+                <legend>Select a column for the X axis:</legend>
+                <div class="scrollable">
+                    
+                    {% for column in columns %}
+                    <label>
+                        <input type="radio" name="x_axis" value="{{column}}">
+                        {{column}}
+                    </label><br>
+                    {% endfor %}
+                 
+                </div>
+            </div>
+
+            <!-- Вторая колонка: выбор оси Y -->
+            <div class="column">
+                <legend>Select columns for the Y axis:</legend>
+                <div class="scrollable">
+                    {% for column in columns %}
+                    <label>
+                        <input type="checkbox" name="y_axis" value="{{column}}">
+                        {{column}}
+                    </label><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Третья колонка: выбор типа графика -->
+            <div class="column">
+                <legend>Select chart type:</legend>
+                <div class="scrollable">
+                    {% for grap in type_graps %}
+                    <label>
+                        <input type="radio" name="graph_type" value="{{grap}}">
+                        {{grap}}
+                    </label><br>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="column">
+                <legend>Select aggregation function:</legend>
+                <div class="scrollable">
+                    {% for func in aggregation_functions %}
+                    <label>
+                        <input type="radio" name="aggregation_function" value="{{ func }}">
+                        {{ func }}
+                    </label><br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Make a graph</button>
+    </form>
+</div>
+{% endblock %}

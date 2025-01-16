@@ -1,0 +1,47 @@
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 500px; /* Ограничиваем высоту колонки */
+    overflow-y: auto; /* Скроллинг по вертикали */
+    overflow-x: auto; /* Скроллинг по горизонтали */
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: block;
+    white-space: nowrap; /* Чтобы текст не переносился на новую строку */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует элементы по горизонтали */
+    justify-content: center; /* Центрирует элементы по вертикали */
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0b979a;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; /* Обеспечивает центрирование кнопки */
+}
+
+button[type="submit"]:hover {
+    background-color: #01302c;
+}

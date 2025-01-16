@@ -1,4 +1,7 @@
 import os
+from django.shortcuts import redirect
+from django.urls import reverse
+from django.views import View
 import pandas as pd
 
 
@@ -31,3 +34,36 @@ class FileAssistant:
     def get_allowed_formats():
         return ['.json', '.csv', '.xls', '.xlsx']
 
+
+class DataProcesor:
+    """Сlass is responsible for data processing"""
+
+    @staticmethod
+    def add_emty_values_columns(df):
+        """Adds a column with a count of empty values."""
+        df['empty values'] = df.isnull().sum(axis=1)
+        return df
+    
+    @staticmethod
+    def get_data_shape(df):
+        """Returns the number of rows and columns."""
+        return df.shape
+
+
+class AuthenticatedView(View):
+    reverse_url = 'users:login'
+
+    """Base class for views that require user authentication checks.
+    Attributes:
+    reverse_url (str): URL to redirect unauthenticated users to.
+    Defaults to login page ('users:login')
+    Methods:
+    dispatch: Checks if user is authenticated. If not, redirects to URL
+    specified in `reverse_url`. Otherwise, continue executing request"""
+
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return redirect(reverse(self.reverse_url))
+        return super().dispatch(request, *args, **kwargs)
+    

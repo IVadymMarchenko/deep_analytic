@@ -1,0 +1,1 @@
+aggregation_functions = ['sum','max','min','count','average','unique']

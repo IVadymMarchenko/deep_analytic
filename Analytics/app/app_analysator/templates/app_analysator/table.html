@@ -30,6 +30,6 @@
             {% endfor %}
         </tbody>
     </table>
-    <h4 class="dataset-info">columns <a style="color:red;">{{num_cols}}</a>,  rows <a style="color:red;">{{num_rows}}</a> in your data! Please follow the <a href="#">link</a> to select the chart and analysis</h4>
+    <h4 class="dataset-info">columns <a style="color:red;">{{num_cols}}</a>,  rows <a style="color:red;">{{num_rows}}</a> in your data! Please follow the <a href="{% url "analysator:make_graph" %}">link</a> to select the chart and analysis</h4>
 </div>
 {% endblock %}

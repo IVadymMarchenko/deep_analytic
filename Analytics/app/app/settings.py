@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'base_app',
     'users',
     'app_profile',
-    'app_analysator'
+    'app_analysator',
+    'app_display_data'
 ]
 
 MIDDLEWARE = [

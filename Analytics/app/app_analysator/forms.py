@@ -13,7 +13,7 @@ class MyFileForm(forms.ModelForm):
         file = self.cleaned_data.get('file')  # Получаем файл из cleaned_data
         if file:
             # Проверка на размер файла
-            max_size = 5 * 1024 * 1024  # 5 MB
+            max_size = 20 * 1024 * 1024  # 5 MB
             if file.size > max_size:
                 raise forms.ValidationError("The file is too large. Maximum file size is 5 MB.")
 
