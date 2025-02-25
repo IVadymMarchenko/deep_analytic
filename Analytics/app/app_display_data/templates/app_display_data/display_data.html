@@ -12,9 +12,11 @@
 
 <div class="content">
     {% if errors %}
-       <p>{{errors}}</p>
+    {% for error in errors%}
+       <p style='color:red;'>{{error}}</p>
+       {% endfor %}
     {% endif %}
     <img src="{{ chart_url }}" alt="Sales Chart" style="max-width: 100%; height: 100%;">
-    <a href="" class="download-link">Download Chart</a>
+    <a href="{{ download_url }}" class="download-link" download>Download Chart</a>
 </div>
 {% endblock%}

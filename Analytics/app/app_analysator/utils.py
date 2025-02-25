@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.urls import reverse
 from django.views import View
 import pandas as pd
-
+import time
 
 class FileAssistant:
 
@@ -23,8 +23,12 @@ class FileAssistant:
                      ".xls": pd.read_excel
                      }
         if extension in func_read:
+            start_time = time.time()
+            print('Start',start_time)
             try:
                 df = func_read[extension](uploaded_file)
+                end_time = time.time()
+                print('end_time',end_time)
                 return df
             except Exception as e:
                 raise ValueError(f"error processing file {uploaded_file}")

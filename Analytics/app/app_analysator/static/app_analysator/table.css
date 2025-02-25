@@ -70,3 +70,52 @@ th {
     z-index: 3; /* Заголовки остаются поверх фиксированной первой колонки */
 }
 
+/* paginator */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* уменьшил отступ сверху */
+}
+
+.step-links {
+    display: flex;
+    gap: 8px; /* уменьшил промежуток между элементами */
+    font-size: 14px; /* уменьшил размер шрифта */
+}
+
+.step-links a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 6px 12px; /* уменьшил внутренний отступ */
+    border-radius: 4px;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.step-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.step-links .current {
+    font-weight: bold;
+    color: #333;
+}
+
+.step-links .current a {
+    pointer-events: none;
+    color: #333;
+}
+
+.step-links a:disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.step-links .first, .step-links .last {
+    font-weight: bold;
+}
+
+
+

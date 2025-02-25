@@ -26,3 +26,26 @@ input[type="file"]{
     transition: all 0.4s ease; /* Плавная анимация */
 }
 
+.download-link {
+    display: inline-block;
+    background-color: #05588f; /* Зелёный цвет кнопки */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы */
+    text-align: center; /* Центровка текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скруглённые углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: all 0.3s ease; /* Эффект при наведении */
+}
+
+.download-link:hover {
+    background-color: #42a5cc; /* Более тёмный зелёный при наведении */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+.download-link:active {
+    background-color: #003d8d; /* Ещё более тёмный зелёный при клике */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Уменьшенная тень при клике */
+    transform: translateY(2px); /* Эффект нажатия */
+}

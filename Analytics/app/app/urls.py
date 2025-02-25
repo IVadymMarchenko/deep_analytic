@@ -15,8 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from debug_toolbar.toolbar import debug_toolbar_urls
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -24,4 +27,9 @@ urlpatterns = [
     path("profile/",include("app_profile.urls",namespace='profile')),
     path("upload/",include("app_analysator.urls",namespace='analysator')),
     path("display/",include("app_display_data.urls",namespace="display_data")),
-]
+    path("download-char/",include("app_download_char.urls",namespace="download_char")),
+] + debug_toolbar_urls()
+
+
+if settings.DEBUG:  # Только для режима разработки
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
