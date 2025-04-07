@@ -12,14 +12,15 @@ The project includes the following features:
 - **Download Graphs**: Users can download the generated graphs as image files.
 - **Form Validation**: Form validation for file uploads and other data is done using JavaScript.
 
+-
+-
 
-
-- https://github.com/IVadymMarchenko/deep_analytic.git
+- git clone https://github.com/IVadymMarchenko/deep_analytic.git
 - venv\Scripts\activate
-cd Analytics
-cd app
-pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+- cd Analytics
+- cd app
+- pip install -r requirements.txt
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver
 
