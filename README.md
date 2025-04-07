@@ -14,8 +14,8 @@ The project includes the following features:
 
 
 
-https://github.com/IVadymMarchenko/deep_analytic.git
-venv\Scripts\activate
+- https://github.com/IVadymMarchenko/deep_analytic.git
+- venv\Scripts\activate
 cd Analytics
 cd app
 pip install -r requirements.txt
