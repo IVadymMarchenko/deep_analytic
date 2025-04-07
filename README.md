@@ -16,7 +16,8 @@ The project includes the following features:
 -
 -   To run
 - git clone https://github.com/IVadymMarchenko/deep_analytic.git
-- venv\Scripts\activate
+- cd deep_analytic
+- my_env\Scripts\activate
 - cd Analytics
 - cd app
 - pip install -r requirements.txt
