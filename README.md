@@ -14,7 +14,7 @@ The project includes the following features:
 
 -
 -
-
+-   For run
 - git clone https://github.com/IVadymMarchenko/deep_analytic.git
 - venv\Scripts\activate
 - cd Analytics
